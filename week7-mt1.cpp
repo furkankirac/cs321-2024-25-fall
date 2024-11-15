@@ -2,7 +2,7 @@
 #include <vector>
 
 void F1(auto& a, auto& b) { auto  t = a;  a = b;   b = t; }
-void F2(auto* a, auto* b) { auto* t = a; *a = *b; *b = *t; }
+void F2(auto* a, auto* b) { auto t = *a; *a = *b; *b = t; }
 
 void Q1() {
     auto a = 1;
@@ -86,9 +86,9 @@ void Q6() {
 
 int main(int argc, char* argv[])
 {
-    // Q1();
+    Q1();
     // Q3();
     // Q4();
     // Q5();
-    Q6();
+    // Q6();
 }
